@@ -1,0 +1,113 @@
+# Recycling Scale House Software Quick Start Guide
+
+## Summary
+
+Team members covering breaks or absences at the scale house use this guide to work with tickets in the Scale House Software.
+
+## Open a Ticket
+
+When a truck pulls on to the inbound scale to pick up a load, you will need to open a ticket.
+
+1. In the icon ribbon, click **tickets**. This opens a new Scale House Software window.
+2. In the site code, date, and operator fields, confirm that the appropriate information has populated.
+    * Site code: 00
+    * Date: [Current date]
+    * Operator: XXXX
+    * **Note:** If the correct information is not in these fields or the fields are blank, reach out to the scale supervisor.
+3. In the Vehicle field, enter **WGH**.
+4. In the Bill-to field, enter the **4-digit code** for the billing company listed on the load’s BOL (Bill of Lading).
+    * If the code is unknown, click the **magnifying glass** icon to the right of the Bill-to field to open the search window.
+        1. In the Name field, enter the first three or four letters of the company’s name.
+        2. Press **tab**. This begins the search and highlight the first search option that starts with those letters.
+        3. Double click on the line containing the correct billing company. This enters the company’s code in the Bill-to field.
+5. In the Reference field, enter the **PO (Purchase Order) number** listed on the BOL.
+6. In the second comment line field, enter the **trucking company name**. 
+    * **Note:** The first comment line field is always left blank to leave space for the printed invoice’s header. Any text entered in the first comment line will print over the header.
+7. In the third comment line field, enter the truck’s **trailer number**.
+8. In the fourth comment line field, enter the **number of bales** loaded on the truck.
+9. In the Material field, enter the **material code**. Refer to the Material Reference chart on page 00.
+10. In the Scale Data section, click **1** to collect the weight information from the inbound scale.
+    * **Note:** If the scale weight is incorrect or there is an error that prevents the collection of the weight information, reach out to the scale supervisor.
+
+## Hold a Ticket
+
+1. Confirm that the correct information is entered in all the necessary fields. The hold button does not display until these fields have text. Refer to the Open a ticket section.
+2. In the bottom bar, click **hold**. This adds the ticket to the hold queue and clear the ticket window.
+
+## Get a Held Ticket
+
+1. In the bottom bar, click **Get Held**. The Select Held Ticket window opens, displaying the hold queue.
+    * **Note:** The Get Held button only displays if there are tickets currently in the hold queue.
+2. Double click the **ticket number** to select and open the ticket.
+3. Review the entered information to confirm that the correct held ticket was opened.
+    * If the wrong ticket was opened, return to the held ticket queue by clicking Get Held.
+
+## Close a Ticket
+
+1. Confirm that the entered information on the ticket matches the BOL.
+2. In the Scale Data section, click **9** to collect the weight information from the outbound scale.
+    * **Note:** If the scale weight is incorrect or there is an error that prevents the collection of the weight information, reach out to the scale supervisor.
+3. Press **tab**. This calculates the net weight and enters it in the net weight field.
+4. In the bottom bar, click **Finish**. This closes the ticket and prints out the invoice.
+    * If the Finish button does not display in the bottom bar, refer to the Open a ticket and Close a ticket steps to ensure that all the information has been correctly entered.
+    * **Note:** Reach out to the scale supervisor if the Finish button still does not display or there are any errors preventing the ticket from closing.
+
+## Search for a Ticket
+
+1. In the icon ribbon, click **View**. The View Ticket window opens.
+
+### Search by Ticket Number
+
+1. In the Ticket Id field, enter the **ticket number**.
+2. Press **tab**. This starts the search and highlights the ticket with the entered number.
+    * Add an asterisk (*) to the end of the number to run the search with a partial number.
+3. Double click the ticket number to select and open the ticket.
+
+### Search by Company Code
+
+1. In the company code field, enter the **company code**.
+2. Press **tab**. This returns all the tickets that have the entered company code.
+    * Filter the results by using the Start Date and End Date fields to return all the tickets closed within those dates.
+3. Double click the ticket number to select and open the ticket.
+
+### Search by Date
+
+1. In the Start Date field, enter the **date**. 
+2. Press **tab**. This returns all the tickets that were closed on that date.
+    * **Note:** The tickets are stored in the system by their close date.
+3. Double click the ticket number to select and open the ticket.
+
+## Print a Ticket
+
+### Print a Closed Ticket
+
+1. Search for the **ticket**. Refer to the Search for a Ticket section.
+2. Review the ticket information to confirm that the correct ticket was opened.
+3. Click **Print Invoice**. This will print the ticket.
+
+### Print an Open Ticket
+
+1. Close the **ticket**. Refer to the Close a Ticket section.
+    * If you do not have the outbound weight for the load, in the outbound weight field, enter the **inbound weight + 20 pounds**.
+2. Search for the **ticket**. Refer to the Search for a Ticket section.
+3. Review the ticket information to confirm that the correct ticket was opened.
+4. Click **Print Invoice**. This will print the ticket.
+
+## Void a Ticket
+
+There is not a delete function for tickets in the Recycling Scale House Software. Instead, the ticket will need to be voided. A voided ticket remains in the system, but the company will not receive a bill for the ticket.
+
+### Void a Closed Ticket
+
+1. Search for the **ticket**. Refer to the Search for a Ticket section.
+2. In the bottom bar, click **Void Ticket**. The Void Ticket window opens.
+3. In the Reason field, enter a brief description of why the ticket is being voided.
+4. Click **void**. A voided invoice prints.
+
+### Void an Open Ticket
+
+1. Close the **ticket**. Refer to the Close a Ticket section.
+    * If you do not have the outbound weight for the load, in the outbound weight field, enter the **inbound weight + 20 pounds**.
+2. Search for the **ticket**. Refer to the Search for a Ticket section.
+3. In the Reason field, enter a brief description of why the ticket is being voided.
+4. Click **void**. A voided invoice prints.

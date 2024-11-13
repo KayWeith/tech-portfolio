@@ -1,0 +1,77 @@
+# Retrieve waste trucks for a billing company
+
+Retrieve the truck numbers and material codes of waste trucks for a billing company.
+
+## URL
+```
+GET https://recyclingscalehouse.com/api/v1/trucks
+```
+
+## Query Parameters
+
+| Parameter | Description | Type | Required | Notes |
+| --------- | ----------- | ---- | -------- | ----- |
+| **companyCode** | The 4-digit code for the billing company | string | Required |  |
+| **type** | The type of waste truck | string | Optional | The default is all types. The valid values are: rear, front, side, roll |
+| **offset** | The starting index | integer | Optional | |
+| **limit** | The number of results to return | integer | Optional | The default is 5. |
+
+## Headers
+
+| Header Name | Description | Required | Values |
+| ----------- | ----------- | -------- | ------ |
+| **Bearer** | The access token | Required | Refer to the Authentication section. |
+| **Accept** | The data format to be returned | Optional | application/json, application/xml. The default is application/json.|
+
+## Sample Request
+```
+GET https://recyclingscalehouse.com/api/v1/trucks?companyCode=0000&type=front
+
+Bearer: X00XX00X00
+Accept: application/json
+```
+
+## Response
+
+| Element | Description | Type | Notes |
+| ------- | ----------- | ---- | ----- |
+| companyCode | The 4-digit code for the billing company | string | |
+| type | The type of waste truck | string | If the type is not specified, then type is not included in the response. |
+| truckNumber | The truck number | integer | |
+| materialCode | The code for the truck's load material | string | The valid values are: const, comm, rec, res |
+
+## Sample Response
+```
+{
+	"companyCode": "0000",
+	"type": "front",
+	"trucks": [
+		{
+			"truckNumber": 705,
+			"materialCode": "rec"
+		},
+		{
+			"truckNumber": 721,
+			"materialCode": "comm"
+		},
+		{
+			"truckNumber": 753,
+			"materialCode": "comm"
+		},
+		{
+			"truckNumber": 777,
+			"materialCode": "const"
+		},
+		{
+			"truckNumber": 790,
+			"materialCode": "res"
+		}
+	]
+}
+```
+## Status Codes and Errors
+| Code | Description | Notes |
+| ---- | ----------- | ----- |
+| 200 | OK | Successful response. |
+| 401 | Unauthorized | The access token is not valid for this resource. |
+| 404 | Not found | The truck type is not valid. |
