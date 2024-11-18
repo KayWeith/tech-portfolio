@@ -1,0 +1,61 @@
+# BattleCards Card Game Web App
+
+A simplified version of the War card game built using the [Deck of Cards API](https://deckofcardsapi.com/) along with HTML, CSS, and JavaScript. This app was built in VS code.
+
+You can find the BattleCards site [here](https://kwbattlecards.netlify.app/).
+
+You can view the code [here](https://github.com/KayWeith/tech-portfolio/tree/main/kw-battlecards-site).
+
+## Draw a Card
+Request a card from the specified deck.
+
+## URL
+https://deckofcardsapi.com/api/deck/{deck_id}/draw/
+
+## Query Parameters
+| Parameter | Description | Type | Required | Notes |
+| --------- | ----------- | ---- | -------- | ----- |
+| count | The number of cards to return from the deck | integer | Optional | The default is 1. |
+
+## Sample Request
+```
+fetch(‘https://deckofcardsapi.com/api/deck/{deck_id}/draw/?count=1’)
+	.then(response => response.json())
+	.then(data  => console.log(data))
+```
+
+## Response
+| Element |      |      | Description | Type | Notes |
+| ------- | ---- | ---- | ----------- | ---- | ----- |
+| success | | | The status of the request’s success | Boolean | |
+| deck_id | | | The id for the deck the cards are requested from | string | |
+| cards | | | | An array of cards | | |
+| | code | | The code for identifying the card | string | The code is two characters. The first character represents the card’s value. The second character represents the card’s suit.|
+| | image | | The source code (SRC) for the card image | string | The image is in the Portable Network Graphic (PNG) file format. |
+| | images | | An object with the card image in different file formats | string | |
+| | | svg | The SRC for the card image in the Scalable Vector Graphics (SVG) format | string | |
+| | | png | The SRC for the card image in PNG format | string | |
+| | value | | The card's value | string | The valid values are numbers 2-10, JACK, QUEEN, KING, ACE. |
+| | suit | | The card's suit | string | The valid values are CLUBS, DIAMONDS, HEARTS, SPADES. |
+| remaining | | | The number of cards left in the deck | integer | |
+
+## Sample Response
+```
+{
+    "success": true, 
+    "deck_id": "jkv6x8d7td9b", 
+    "cards": [
+        {
+            "code": "3H", 
+            "image": "https://deckofcardsapi.com/static/img/3H.png", 
+            "images": {
+                          "svg": "https://deckofcardsapi.com/static/img/3H.svg", 
+                          "png": "https://deckofcardsapi.com/static/img/3H.png"
+                      }, 
+            "value": "3", 
+            "suit": "HEARTS"
+        }
+    ], 
+    "remaining": 51
+}
+```
