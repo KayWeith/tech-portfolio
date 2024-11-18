@@ -1,0 +1,144 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-image: url("img/green-felt-table-bg.jpg");
+    font-family: "Inter", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    height: 100vh;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    color: #FBFBFF;
+}
+
+h1, h2, h3, p {
+    margin: 0px;
+}
+
+h1 {
+    color: #0B4F6C;
+    margin-top: 30px;
+}
+
+ span {
+    color: #01BAEF;
+ }
+
+ #header {
+    padding-left: 10px;
+ }
+
+/* Button styling */
+
+button {
+    background-color: #01BAEF;
+    cursor: pointer;
+    border: none;
+    font-size: 1.2em;
+    color:#FBFBFF;
+    padding: 5px;
+    align-self: stretch;
+}
+
+#new-deck {
+    background-color: #0B4F6C;
+}
+
+#new-deck:hover {
+    background-color: #FBFBFF;
+    color: #0B4F6C;
+}
+
+button:hover {
+    background-color: #FBFBFF;
+    color: #01BAEF;
+}
+
+button:disabled {
+    cursor: not-allowed;
+}
+
+/* Containers styling */
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 80%;
+    justify-content: flex-end;
+    margin: 40px auto;
+}
+
+.split-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.deck-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+    width: 40%;
+    min-width: 200px;
+    border-top: solid 4px #0B4F6C;
+    border-left: solid 4px #0B4F6C;
+}
+
+.play-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 20px;
+    width: 60%;
+    min-width: 200px;
+    align-items: center;
+    border-top: solid 4px #01BAEF;
+    border-right: solid 4px #01BAEF;
+}
+
+#computer-score {
+    margin-top: 40px;
+    margin-bottom: 0;
+}
+
+#deck-img {
+    margin: 20px auto 0;
+}
+
+#remaining {
+    margin:0px auto 110px;
+}
+
+/* card styling */
+
+#cards {
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+div.card-slot, div#deck-img {
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 250px;
+    width: calc(250px * 5 / 7);
+    text-align: center;
+    color:black;
+    font-weight: 300;
+    align-content: center;
+}
+
+div.card-slot:nth-of-type(1) {
+    margin-bottom: 20px;
+}
+
+img.card, .deck {
+    width: 100%;
+    height: 100%;
+}
